@@ -1,0 +1,70 @@
+body {
+  background-color: #086788; }
+
+.timer-point {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border: 1px #DD1C1A solid;
+  box-shadow: 0 0 5px #540b0a;
+  border-radius: 50%;
+  top: 102px;
+  left: 93px; }
+
+.timer-point::before {
+  content: "";
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid black;
+  bottom: 100px;
+  left: 38px; }
+
+.timer-point::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 230px;
+  background-color: #e62c2a;
+  border: 1px #DD1C1A solid;
+  border-radius: 20px;
+  box-shadow: 0 0 6px #3d0807;
+  bottom: -110px;
+  left: 25px; }
+
+.clock-frame {
+  position: fixed;
+  background-color: #e62c2a;
+  height: 400px;
+  width: 400px;
+  border: 1px #DD1C1A solid;
+  border-radius: 30px;
+  box-shadow: 0 0 3px #82100f;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .clock-frame .timer {
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none; }
+    .clock-frame .timer .timer-svg {
+      position: fixed;
+      width: 370px;
+      top: 51%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    .clock-frame .timer .timer-frame {
+      position: fixed;
+      width: 300px;
+      height: 300px;
+      border: 8px #991312 solid;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,87 @@
+$background-color: #086788;
+$clock-color: #DD1C1A;
+$clock-frame-color: darken($clock-color, 15%);
+
+body {
+    background-color: $background-color;
+}
+
+.timer-point {
+    //cursor: ns-resize;
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    border: 1px $clock-color solid;
+    box-shadow: 0 0 5px darken($clock-color, 30%);
+    border-radius: 50%;
+    top: 102px;
+    left: 93px;
+    //transform: translate(-50%, -50%);
+}
+
+.timer-point::before {
+    content: "";
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid black;
+    bottom: 100px;
+    left: 38px;
+}
+
+.timer-point::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 230px;
+    background-color: lighten($clock-color, 5%);
+    border: 1px $clock-color solid;
+    border-radius: 20px;
+    box-shadow: 0 0 6px darken($clock-color, 35%);
+    bottom: -110px;
+    left: 25px;
+}
+
+.clock-frame {
+    position: fixed;
+    background-color: lighten($clock-color, 5%);
+    height: 400px;
+    width: 400px;
+    border: 1px $clock-color solid;
+    border-radius: 30px;
+    box-shadow: 0 0 3px darken($clock-color, 20%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .timer{
+
+        user-select: none;
+       -moz-user-select: none;
+       -khtml-user-select: none;
+       -webkit-user-select: none;
+       -o-user-select: none;
+
+        .timer-svg {
+            position: fixed;
+            width: 370px;
+            top: 51%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    .timer-frame {
+        position: fixed;
+        width: 300px;
+        height: 300px;
+        border: 8px $clock-frame-color solid;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+
+    }
+}
+}
