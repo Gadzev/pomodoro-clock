@@ -12,10 +12,10 @@ $(document).ready(function() {
         volume: 0.4
     });
 
-    var tickSound = new Howl({
-        urls: ['tickSound.wav'],
-        volume: 0.5,
-    });
+    // var tickSound = new Howl({
+    //     urls: ['tickSound.wav'],
+    //     volume: 0.5,
+    // });
 
     var ringSound = new Howl({
         urls: ['ringSound.wav'],
@@ -37,7 +37,7 @@ $(document).ready(function() {
                 count = Math.round((angle/360)* 60) * 60;
                 ringTemp = count;
                 setAngle();
-                tickSound.stop();
+                // tickSound.stop();
                 turnSound.play();
             }
         }
@@ -46,7 +46,7 @@ $(document).ready(function() {
                 angle -= 2;
                 count = Math.round((angle/360)* 60) * 60;
                 setAngle();
-                tickSound.stop();
+                // tickSound.stop();
             }
         }
     }
@@ -64,7 +64,7 @@ $(document).ready(function() {
     function setTimer() {
         if(count <= 0) {
             ringTemp--;
-            tickSound.stop();
+            // tickSound.stop();
             clearInterval(counter);
             counter = setInterval(setTimer, 1000);
             return;
@@ -77,8 +77,8 @@ $(document).ready(function() {
         ringTemp--;
         angle = (count/60) * 6;
         setAngle();
-        tickSound.stop();
-        tickSound.play();
+        // tickSound.stop();
+        // tickSound.play();
     }
 
     handle.bind('DOMMouseScroll', function(e) {
