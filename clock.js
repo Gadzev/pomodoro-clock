@@ -26,7 +26,7 @@ $(document).ready(function() {
         alert('Move your mouse over the handle and use your mousewheel to set the timer');
     }
 
-    setTimeout(infoAlert, 2000);
+    //    setTimeout(infoAlert, 2000);
 
     var counter = setInterval(setTimer, 1000);
 
